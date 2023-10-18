@@ -18,7 +18,7 @@ public class DashMinController {
 	
 	@GetMapping("/minmin")
 	public String showDashMin(Model model) {
-		
+	
 		List<MinminResult> rankingList = minminService.getRanking();
 		model.addAttribute("rankingList", rankingList);
 		
