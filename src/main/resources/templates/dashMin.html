@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>イトペンタウン</title>
+	<link th:href="@{/css/index.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="bodyAll">
+		<div id="itopenFace">
+			<!-- 画像を表示するだけのdivです -->
+		</div>
+		
+		<div class="contentsArea">
+			<h2>ランキング</h2>
+			<table>
+				<tr>
+					<th>順位</th>
+					<th>プレイヤー名</th>
+					<th>スコア</th>
+				</tr>
+				<tr th:each="form, ranking : ${rankingList}" th:object="${form}">
+					<td th:text="${ranking.count}"></td>
+					<td th:text="*{playername}"></td>
+					<td th:text="*{score}"></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="contentsArea">
+		<p><iframe src="/DashMinminBuild/index.html" width="100%" height="600" scrolling="no" frameborder="0"></p>
+		</div>
+		
+		<div id="footer">
+		</div>	
+	</div>
+</body>
+</html>

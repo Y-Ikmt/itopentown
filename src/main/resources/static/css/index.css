@@ -1,0 +1,146 @@
+html{
+	padding: 0;
+}
+body{
+	padding:0;
+	margin:0;
+	background-color: rgb(139,193,240);
+}
+
+#itopenFace{
+	background-image: url(/images/itopenFace.png);
+	background-repeat:  no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: aliceblue;
+	width:auto;
+	height:300px;
+}
+
+.contentsArea{
+	width: 700px;
+	height:100%;
+	background-color: white;
+	border-radius: 30px;
+	margin: auto;
+	padding: 50px 50px;
+	text-align: center;  
+	display:flex;
+  	flex-flow: column;
+}
+
+
+/* ▼タブコントロール */
+#tabcontrol a {
+   display: inline-block;            /* インラインブロック化 */
+   border-width: 1px 1px 0px 1px;    /* 下以外の枠線を引く */
+   border-style: solid;              /* 枠線の種類：実線 */
+   border-color: black;              /* 枠線の色：黒色 */
+   border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
+   padding: 0.75em 1em;              /* 内側の余白 */
+   text-decoration: none;            /* リンクの下線を消す */
+   color: black;                     /* 文字色：黒色 */
+   background-color: white;          /* 背景色：白色 */
+   font-weight: bold;                /* 太字 */
+   position: relative;               /* JavaScriptでz-indexを調整するために必要 */
+}
+/* ▼タブにマウスポインタが載った際(任意) */
+#tabcontrol a:hover {
+   text-decoration: underline;       /* 文字に下線を引く */
+}
+#tabbody div {
+   border: 3px solid rgb(139,193,240); /* 枠線：黒色の実線を1pxの太さで引く */
+   border-radius: 30px;
+   margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
+   padding: 1em;            /* 内側の余白量 */
+   background-color: white; /* 背景色：白色 */
+   position: relative;      /* z-indexを調整するために必要 */
+   z-index: 0;              /* 重なり順序を「最も背面」にするため */
+}
+
+form{
+	display:flex;
+  	flex-direction: column;
+}
+
+.inputField{
+	width: 300px; /* 幅を調整 */
+	margin:5px auto;
+	padding: 10px;
+	border: 2px solid rgb(139,193,240); /* ボーダーのスタイル */
+	border-radius: 5px; /* 角丸 */
+	outline: none; /* フォーカス時のアウトラインを削除 */
+	font-size: 16px; /* フォントサイズ */
+}
+/* テキストボックスにフォーカスした際のスタイル */
+.inputField:focus {
+    border-color: #3498db; /* フォーカス時のボーダーカラー */
+}
+
+/* Submitボタンのスタイル */
+.submitButton{
+	width: 300px;
+	margin:5px auto;
+    background-color: rgb(139,193,240); /* ボタンの背景色 */
+    color: rgb(0, 0, 0); /* ボタンのテキスト色 */
+    padding: 10px 20px; /* パディング */
+    border: none; /* ボーダーを削除 */
+    border-radius: 5px; /* 角丸 */
+    font-size: 16px; /* フォントサイズ */
+    cursor: pointer; /* カーソルスタイルをポインターに設定 */
+}
+
+/* マウスホバー時のスタイル */
+.submitButton:hover {
+    background-color: #3498db; /* マウスホバー時の背景色 */
+}
+
+.bodyAll{
+    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+    position: relative;/* ←相対位置 */
+    padding-bottom: 60px; /* ←フッターの高さを指定 */
+    box-sizing: border-box;
+    /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+}
+
+#footer{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(231,250,128);
+	position: absolute;
+	bottom: 0;
+}
+
+hr{
+	width: 100%;
+	margin:10px 0;
+	border:none; /*水平線の境界線を消す*/
+	border-top-style:dashed; /*線の種類*/
+	border-top-width:2px; /*線の太さ*/  
+	border-top-color:rgb(139,193,240); /*線の色*/ 
+}
+
+h1{
+	font-size: 48px;
+	margin:0;
+}
+h2{
+	font-size: 36px;
+	margin:0;
+}
+p{
+	font-size: 24px;
+	margin:0;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+
